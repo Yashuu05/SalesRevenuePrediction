@@ -40,7 +40,7 @@ def perform_feature_engineering(file_path):
     df['value_ratio'] = df['customer_lifetime_value'] / df['price']
 
     # drop hour column
-    df = df.drop(df['hour'], axis=1)
+    df = df.drop(['hour','date'], axis=1)
 
     # print total columns
     cols = df.shape[1]
@@ -50,7 +50,7 @@ def perform_feature_engineering(file_path):
     print("\n",df.info())
 
     # print null values
-    total_null_values = df.insull().sum().sum()
+    total_null_values = df.isnull().sum().sum()
     print("\ntotal null values = ", total_null_values)
 
     # return the new dataset
