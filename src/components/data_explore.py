@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from utils.load_data import read_data
 import logging
 
@@ -25,5 +28,5 @@ def data_overview(path):
         logging.error(f"{e}")
 
 if __name__ == "__main__":
-    file_path = r"data\E-commerce_train.csv"
+    file_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'E-commerce_train.csv')
     data_overview(file_path)
