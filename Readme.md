@@ -35,9 +35,11 @@
 
 ---
 
-## 🎯 About
+## About
 
-[DETAILED_DESCRIPTION_OF_PROJECT_OBJECTIVES_AND_GOALS]
+- This is the Regression Machine Learning Project to predict target varaible on the dataset using Regression Algorithms
+- *target variable* : `sales_revenue`
+- *input* : `X_train.csv`
 
 ### Problem Statement
 
