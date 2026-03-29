@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Revenue Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blob"></div>
+    <div class="background-blob blob-2"></div>
+
+    <div id="auth-page" class="page active">
+        <div class="glass-card auth-card">
+            <h1 class="logo-text">Predict<span>Revenue</span></h1>
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                <button class="tab-btn" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+            
+            <form id="auth-form" onsubmit="handleAuth(event)">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="primary-btn">Continue</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard-page" class="page">
+        <nav class="navbar">
+            <div class="nav-content">
+                <h2 class="nav-logo">Predict<span>Revenue</span></h2>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <section class="hero-section">
+                <h1>Sales Revenue Prediction</h1>
+                <div class="about-container">
+                    <p>Leverage advanced machine learning to forecast your future sales revenues accurately based on historical performance and market metrics.</p>
+                    <p>Our ensemble models analyze multiple dimensions of your data to provide precise revenue estimations and probability scores.</p>
+                    <p>Optimize your marketing spend and resource allocation with data-driven insights tailored to your business model.</p>
+                </div>
+            </section>
+
+            <div class="main-container">
+                <div class="form-container glass-card">
+                    <h3>Prediction Parameters</h3>
+                    <form id="prediction-form" onsubmit="handlePredict(event)">
+                        <div class="form-grid">
+                            <!-- Categorical Fields -->
+                            <div class="input-group">
+                                <label for="region">Region</label>
+                                <select id="region" required>
+                                    <option value="" disabled selected>Select Region</option>
+                                    <option value="North">North</option>
+                                    <option value="South">South</option>
+                                    <option value="East">East</option>
+                                    <option value="West">West</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="channel">Channel</label>
+                                <select id="channel" required>
+                                    <option value="" disabled selected>Select Channel</option>
+                                    <option value="Online">Online</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Social Media">Social Media</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="product_category">Product Category</label>
+                                <select id="product_category" required>
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Fashion">Fashion</option>
+                                    <option value="Home">Home</option>
+                                </select>
+                            </div>
+
+                            <!-- Numerical Fields -->
+                            <div class="input-group">
+                                <label for="ad_spend">Ad Spend ($)</label>
+                                <input type="number" id="ad_spend" placeholder="0.00" step="0.01" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="price">Unit Price ($)</label>
+                                <input type="number" id="price" placeholder="0.00" step="0.01" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="discount_ratio">Discount Ratio</label>
+                                <input type="number" id="discount_ratio" placeholder="0.0-1.0" step="0.01" min="0" max="1" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="cost_per_click">Cost Per Click ($)</label>
+                                <input type="number" id="cost_per_click" placeholder="0.00" step="0.01" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="reach_per_spend">Reach Per Spend</label>
+                                <input type="number" id="reach_per_spend" placeholder="0.00" step="0.01" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="value_ratio">Value Ratio</label>
+                                <input type="number" id="value_ratio" placeholder="0.00" step="0.01" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Predict Revenue</span>
+                            <div class="loader-icon hidden"></div>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="result-card" class="result-container glass-card hidden">
+                    <div id="prediction-loader" class="prediction-loader">
+                        <div class="pulse-ring"></div>
+                        <div class="inner-core"></div>
+                        <p>Analyzing Market Trends...</p>
+                    </div>
+
+                    <div id="prediction-output" class="prediction-output hidden">
+                        <h3>Predicted Revenue</h3>
+                        <div class="revenue-val">$ <span id="revenue-amount">0.00</span></div>
+                        <div class="probability-container">
+                            <span>Confidence Score:</span>
+                            <div class="prob-bar">
+                                <div id="prob-fill" class="prob-fill"></div>
+                            </div>
+                            <span id="prob-val">0%</span>
+                        </div>
+                        <button onclick="resetForm()" class="secondary-btn">New Prediction</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
