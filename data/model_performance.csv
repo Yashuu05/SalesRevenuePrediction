@@ -1,0 +1,6 @@
+model,performance
+LinearRegression,43.275869264410765
+SVR,44.833731978502705
+DecisionTreeRegressor,28.297191300512512
+RandomForestRegressor,24.569135458383673
+XGBRegressor,11.331519281920807

@@ -1,4 +1,4 @@
-from sklearn. preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from utils.load_data import read_data
@@ -28,13 +28,13 @@ def create_pipeline(file_path):
     print("creating pipeline...")
 
     cat_preprocessor = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='most_frequent')),
         ('encoder', OneHotEncoder(handle_unknown='ignore'))
-        ('imputer', SimpleImputer(strategy='most_frequent'))
     ])
 
     num_preprocessor = Pipeline(steps=[
-        ('scaler', StandardScaler()),
-        ('imputer', SimpleImputer(strategy='mean'))
+        ('imputer', SimpleImputer(strategy='mean')),
+        ('scaler', StandardScaler())
     ])
 
     pipeline = ColumnTransformer(transformers=[
