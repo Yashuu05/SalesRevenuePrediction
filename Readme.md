@@ -26,11 +26,8 @@
 - [Dataset](#dataset)
 - [Model Performance](#model-performance)
 - [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Results & Evaluation](#results--evaluation)
 - [Contributing](#contributing)
 - [Citation](#citation)
-- [License](#license)
 - [Contact](#contact)
 
 ---
