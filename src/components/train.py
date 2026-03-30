@@ -79,10 +79,10 @@ def train_model(models, X_train, y_train, X_test, y_test):
 if __name__ == "__main__":
     
     # read data
-    X_train = read_data(path=os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'X_train.csv'))
-    X_test = read_data(path= os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'X_test.csv'))
-    y_train = read_data(path=os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'y_train.csv'))
-    y_test = read_data(path= os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'y_test.csv'))
+    X_train = read_data(path=os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'X_train.csv'))
+    X_test = read_data(path= os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'X_test.csv'))
+    y_train = read_data(path=os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'y_train.csv'))
+    y_test = read_data(path= os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'y_test.csv'))
 
     # Replace infinity with NaN so it can be imputed
     import numpy as np

@@ -3,7 +3,7 @@ from sklearn.pipeline import Pipeline
 import os
 
 def create_model_pipeline(model):
-    df = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'X_train.csv')
+    df = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'processed', 'X_train.csv')
     preprocessor = create_pipeline(file_path=df)
 
     model_pipline = Pipeline(steps=[
