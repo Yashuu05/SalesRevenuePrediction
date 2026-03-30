@@ -49,13 +49,13 @@ achieve minimum error. E-commerce companies spend $X and has diverse expenditure
 
 ### System Architecture
 
-[system wrokflow](assets/system_workflow.png)
+![system wrokflow](assets/system_workflow.png)
 
 ---
 
 ### model architecture
 
-[model architecture](assets/ModelArchitecture.png)
+![model architecture](assets/ModelArchitecture.png)
 
 ---
 
