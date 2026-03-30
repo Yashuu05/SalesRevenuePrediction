@@ -91,12 +91,6 @@ achieve minimum error. E-commerce companies spend $X and has diverse expenditure
 
 ---
 
-### Advanced Configuration
-
-See [Configuration](#configuration) section for detailed parameter options.
-
----
-
 ## 📊 Dataset
 
 ### Dataset Information
