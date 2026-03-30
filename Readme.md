@@ -53,21 +53,9 @@ achieve minimum error. E-commerce companies spend $X and has diverse expenditure
 
 ---
 
-### model architecture
+### Model architecture
 
 ![model architecture](assets/ModelArchitecture.png)
-
----
-
-### Model Architecture
-
-[DESCRIBE_MODEL_ARCHITECTURE_DETAILS]
-
-| Component            | Description                                      |
-|----------------------|--------------------------------------------------|
-| Categorical pipeline | Encoding and imputation                          |
-| Numerical pipeline   | Scaling and imputation                           |
-| model pipline        | combines both categorical and numerical pipeline |
 
 ---
 
@@ -289,15 +277,6 @@ Or in APA format:
 
 ---
 
-## 🙏 Acknowledgments
-
-- [ACKNOWLEDGE_CONTRIBUTORS]
-- [MENTION_INSPIRATIONS]
-- [CITE_RESEARCH_PAPERS]
-- [THANK_SUPPORTING_ORGANIZATIONS]
-
----
-
 ## 📖 Additional Resources
 - dataset : https://www.kaggle.com/datasets/amineipad/e-commerce-marketing-and-sales-revenue-prediction?select=train.csv
 - Scikit-learn : https://scikit-learn.org/stable/user_guide.html
@@ -305,6 +284,6 @@ Or in APA format:
 
 ---
 
-**Last Updated**: 29th March 2026
+**Last Updated**: 30th March 2026
 
 **Status**: ACTIVE
