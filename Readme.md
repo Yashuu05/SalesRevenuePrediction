@@ -154,7 +154,8 @@ SalesRevenuePrediction/
 ├── data/
 │   ├── raw/                 # Original, immutable data
 │   ├── processed/           # Cleaned, processed data
-│   └── cleaned/            # cleaned data 
+│   └── cleaned/             # cleaned data 
+|   |__ predicted/           # predicted data on test dataset
 │
 ├── models/
 │   ├── xgb.pkl/      # Saved model weights
@@ -166,7 +167,8 @@ SalesRevenuePrediction/
 |    |        |____  CleanTrainData.py
 |    |        |____  DataOverview.py
 |    |        |____  FeatureEngineering.py
-|    |        |____  save_model.py
+|    |        |____  Predict.py
+|    |        |____  SaveModel.py
 |    |        |____  SplitData.py
 |    |        |____  train.py
 |    |____ pipelines/
