@@ -49,15 +49,15 @@ achieve minimum error. E-commerce companies spend $X and has diverse expenditure
 
 ### System Architecture
 
-```
-┌─────────────────────────────────────┐
-│     [ARCHITECTURE_DIAGRAM]          │
-│                                     │
-│  Input Data → Processing → Model    │
-│                            ↓        │
-│                        Predictions  │
-└─────────────────────────────────────┘
-```
+[system wrokflow](assets/system_workflow.png)
+
+---
+
+### model architecture
+
+[model architecture](assets/ModelArchitecture.png)
+
+---
 
 ### Model Architecture
 
@@ -148,6 +148,8 @@ See [Configuration](#configuration) section for detailed parameter options.
 ```
 SalesRevenuePrediction/
 │
+|___  assets/   # images
+|
 ├── README.md                 # Project documentation
 ├── requirements.txt          # Python dependencies
 │
