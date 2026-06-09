@@ -275,9 +275,3 @@ Or in APA format:
 - dataset : https://www.kaggle.com/datasets/amineipad/e-commerce-marketing-and-sales-revenue-prediction?select=train.csv
 - Scikit-learn : https://scikit-learn.org/stable/user_guide.html
 - Kaggle : https://kaggle.com/
-
----
-
-**Last Updated**: 30th March 2026
-
-**Status**: ACTIVE
